@@ -1,0 +1,113 @@
+/* Navbar css */
+body {
+  background-color: #202020;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+}
+nav .nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}
+nav .nav-wrapper .navbar-brand {
+  display: table-cell;
+  color: #feb960;
+  margin: 0;
+  padding-top: 10px;
+}
+nav .nav-wrapper .navbar-brand:hover {
+  text-decoration: none;
+  color: #feb960;
+}
+nav .nav-wrapper .navbar-brand a {
+  color: #feb960;
+}
+nav .nav-wrapper .navbar-brand a:hover {
+  text-decoration: none;
+  color: #feb960;
+}
+nav .nav-wrapper .navbar-toggle {
+  left: 50%;
+  position: absolute;
+  top: 0px;
+  padding-top: 10px;
+}
+nav .nav-wrapper .nav-get-in-touch {
+  text-align: right;
+}
+nav .nav-wrapper .navbar-toggle,
+nav .nav-wrapper .nav-get-in-touch {
+  display: table-cell;
+}
+nav .nav-wrapper .navbar-toggle a,
+nav .nav-wrapper .nav-get-in-touch a {
+  color: #ffffff;
+}
+nav .nav-wrapper .navbar-toggle a:hover,
+nav .nav-wrapper .nav-get-in-touch a:hover {
+  text-decoration: none;
+  transition: color 1s;
+  color: #feb960;
+}
+nav .nav-wrapper .navbar-toggle a span,
+nav .nav-wrapper .nav-get-in-touch a span {
+  color: #feb960;
+  padding: 0.5rem;
+}
+nav .nav-wrapper div {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+nav .nav-wrapper a {
+  padding-left: 1rem;
+  padding-right: 0;
+}
+nav .navbar-content {
+  display: none;
+  transform: translate3d(-42%, 54px, 0);
+  left: 50%;
+  position: absolute;
+}
+nav .navbar-content > div {
+  display: table-cell;
+}
+nav .navbar-content .nav-item-wrapper ul.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 1rem;
+}
+nav .navbar-content .nav-item-wrapper ul .nav-item {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  display: inline-block;
+}
+nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link {
+  color: #ffffff;
+}
+nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover {
+  color: #feb960;
+}
+
+.home-page {
+  background-color: #171717;
+  height: 100vh;
+  background: url(../assets/images/drupal-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  nav .nav-get-in-touch {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

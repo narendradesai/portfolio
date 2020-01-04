@@ -1,0 +1,114 @@
+/* Navbar css */
+body {
+  background-color: #202020;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    .navbar-brand {
+      display: table-cell;
+      color: #feb960;
+      margin: 0;
+      padding-top: 10px;
+      &:hover {
+        text-decoration: none;
+        color: #feb960;
+      }
+      a {
+        color: #feb960;
+        &:hover {
+          text-decoration: none;
+          color: #feb960;
+        }
+      }
+    }
+    .navbar-toggle {
+      left: 50%;
+      position: absolute;
+      top: 0px;
+      padding-top: 10px;
+    }
+    .nav-get-in-touch {
+      text-align: right;
+    }
+    .navbar-toggle,
+    .nav-get-in-touch {
+      display: table-cell;
+      a {
+        color: #ffffff;
+        &:hover {
+          text-decoration: none;
+          transition: color 1s  ;
+          color: #feb960;
+        }
+        span {
+          color: #feb960;
+          padding: 0.5rem;
+        }
+      }
+    }
+    div {
+      padding-left: 0;
+      padding-right: 1rem;
+    }
+    a {
+      padding-left: 1rem;
+      padding-right: 0;
+    }
+  }
+  .navbar-content {
+    // display: table-row;
+    display: none;
+    transform: translate3d(-42%, 54px, 0);
+    left: 50%;
+    position: absolute;
+    & > div {
+      display: table-cell;
+    }
+    .nav-item-wrapper {
+      ul {
+        &.navbar-nav {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          padding-top: 1rem;
+        }
+        .nav-item {
+          padding-right: 2rem;
+          padding-left: 2rem;
+          display: inline-block;
+          .nav-link {
+            color: #ffffff;
+            &:hover {
+              color: #feb960;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-page {
+  background-color: #171717;
+  height: 100vh;
+  background: url(../assets/images/drupal-background.jpg) no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  // height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  nav .nav-get-in-touch {
+    display: none;
+  }
+}
