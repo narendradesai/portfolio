@@ -13,6 +13,11 @@ nav .nav-wrapper {
   align-items: center;
   min-height: 60px;
 }
+@media (max-width: 767px) {
+  nav .nav-wrapper {
+    position: relative;
+  }
+}
 nav .nav-wrapper .navbar-brand {
   display: table-cell;
   color: #feb960;
@@ -35,13 +40,27 @@ nav .nav-wrapper .navbar-toggle {
   position: absolute;
   top: 0px;
   padding-top: 10px;
+  display: table-cell;
+}
+@media (max-width: 767px) {
+  nav .nav-wrapper .navbar-toggle {
+    left: unset;
+    right: 0;
+  }
 }
 nav .nav-wrapper .nav-get-in-touch {
   text-align: right;
+  display: table-cell;
+}
+@media (max-width: 767px) {
+  nav .nav-wrapper .nav-get-in-touch {
+    display: none;
+  }
 }
 nav .nav-wrapper .navbar-toggle,
 nav .nav-wrapper .nav-get-in-touch {
-  display: table-cell;
+  padding-left: 0;
+  padding-right: 1rem;
 }
 nav .nav-wrapper .navbar-toggle a,
 nav .nav-wrapper .nav-get-in-touch a {
@@ -58,33 +77,57 @@ nav .nav-wrapper .nav-get-in-touch a span {
   color: #feb960;
   padding: 0.5rem;
 }
-nav .nav-wrapper div {
-  padding-left: 0;
-  padding-right: 1rem;
-}
 nav .nav-wrapper a {
   padding-left: 1rem;
   padding-right: 0;
 }
 nav .navbar-content {
   display: none;
-  transform: translate3d(-42%, 54px, 0);
+  transform: translate3d(-42%, 58px, 0);
   left: 50%;
   position: absolute;
 }
+@media (max-width: 767px) {
+  nav .navbar-content {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+}
 nav .navbar-content > div {
   display: table-cell;
+}
+@media (max-width: 767px) {
+  nav .navbar-content .nav-item-wrapper {
+    display: inline-block;
+    float: right;
+    width: 50%;
+  }
 }
 nav .navbar-content .nav-item-wrapper ul.navbar-nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 1rem;
+}
+@media (max-width: 767px) {
+  nav .navbar-content .nav-item-wrapper ul.navbar-nav {
+    flex-direction: column;
+  }
 }
 nav .navbar-content .nav-item-wrapper ul .nav-item {
   padding-right: 2rem;
   padding-left: 2rem;
   display: inline-block;
+  text-align: center;
+  padding-top: 1rem;
+}
+nav .navbar-content .nav-item-wrapper ul .nav-item:hover {
+  background-color: #171717;
+}
+@media (max-width: 767px) {
+  nav .navbar-content .nav-item-wrapper ul .nav-item {
+    padding-left: 0;
+  }
 }
 nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link {
   color: #ffffff;
