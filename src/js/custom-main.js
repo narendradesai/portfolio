@@ -16,5 +16,5 @@ $(document).ready(function() {
   // var parallaxInstance = new Parallax(item, {
   //   relativeInput: true
   // });
-  parallaxInstance.friction(0.2, 0.2);
+  // parallaxInstance.friction(0.2, 0.2);
 });

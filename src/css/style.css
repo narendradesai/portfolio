@@ -2,10 +2,15 @@
 body {
   background-color: #202020;
 }
+body .color {
+  color: #feb960;
+}
 
 nav {
+  display: none !important;
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 nav .nav-wrapper {
   display: flex;
@@ -145,11 +150,62 @@ nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover {
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
+  position: relative;
+  color: #ffffff;
+}
+.home-page .container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.home-page .container .column-wrapper {
+  padding: 2rem;
+  border: solid 1px #ffffff;
+}
+.home-page .container .home-page-nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.home-page .container .home-page-nav ul li {
+  list-style: none;
+  padding: 0 0.75rem;
+}
+.home-page .container .home-page-nav ul li:not(:first-child) {
+  border-left: solid 1px #feb960;
+}
+.home-page .container .home-page-nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.home-page .container .home-page-nav ul li a:hover {
+  transition: color 1s;
+  color: #feb960;
+}
+.home-page .container .next-section-arrow {
+  display: flex;
+  justify-content: center;
+  animation: bounce 2s infinite;
+  padding-top: 1rem;
+}
+.home-page .container .next-section-arrow a {
+  height: 40px;
+  width: 20px;
+  text-align: center;
+}
+.home-page .container .next-section-arrow a i {
+  color: #feb960;
 }
 
-@media (max-width: 767px) {
-  nav .nav-get-in-touch {
-    display: none;
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
   }
 }
 
