@@ -6,8 +6,13 @@ body {
   }
 }
 nav {
-  &.top-fixed-nav{
+  &.visible {
+    display: block;
+  }
+  &.hide-nav {
     display: none !important;
+  }
+  &.top-fixed-nav{
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -72,7 +77,7 @@ nav {
       }
     }
     a {
-      padding-left: 1rem;
+      padding-left: 0;
       padding-right: 0;
     }
   }
@@ -113,6 +118,12 @@ nav {
           padding-top: 1rem;
           &:hover {
             background-color: #171717;
+          }
+          &.active{
+            background-color: #171717;
+            .nav-link {
+              color: #feb960;
+            }
           }
           @media (max-width: 767px) {
             padding-left: 0;
@@ -242,6 +253,22 @@ nav {
 
   }
 }
+.projects {
+  background-color: #feb960;
+  height: 100vh;
+  .inner-container {
+
+  }
+}
+.contact-me {
+  background-color: red;
+  height: 100vh;
+  .inner-container {
+
+  }
+}
+
+
 
 // @media (max-width: 767px) {
 //   nav .nav-get-in-touch {

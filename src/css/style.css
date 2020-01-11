@@ -6,8 +6,13 @@ body .color {
   color: #feb960;
 }
 
-nav.top-fixed-nav {
+nav.visible {
+  display: block;
+}
+nav.hide-nav {
   display: none !important;
+}
+nav.top-fixed-nav {
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -83,7 +88,7 @@ nav.top-fixed-nav .nav-wrapper .nav-get-in-touch a span {
   padding: 0.5rem;
 }
 nav.top-fixed-nav .nav-wrapper a {
-  padding-left: 1rem;
+  padding-left: 0;
   padding-right: 0;
 }
 nav.top-fixed-nav .navbar-content {
@@ -128,6 +133,12 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item {
 }
 nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item:hover {
   background-color: #171717;
+}
+nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item.active {
+  background-color: #171717;
+}
+nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item.active .nav-link {
+  color: #feb960;
 }
 @media (max-width: 767px) {
   nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item {
@@ -235,6 +246,14 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
 
 .technologies {
   background-color: #202020;
+  height: 100vh;
+}
+.projects {
+  background-color: #feb960;
+  height: 100vh;
+}
+.contact-me {
+  background-color: red;
   height: 100vh;
 }
 @keyframes bounce {
