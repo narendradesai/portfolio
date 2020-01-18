@@ -249,6 +249,7 @@ nav {
   background-color: #202020;
   // height: 100vh;
   .inner-container {
+    padding: 3rem 0;
     .container {
       h1 {
         text-align: center;
@@ -256,68 +257,130 @@ nav {
       }
       .tech-wrapper {
         .tech-item-wrapper {
-          padding: 3rem;
-          border: 1px solid #feb960;
+          padding: 0;
           overflow: hidden;
-          transition: all 500ms ease-out;
-          &:hover {
+          &:before {
+            content: "";
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+            height: 100%;
+            position: absolute;
+          }
+          &:nth-child(3n+1):before {
+            border-color: transparent;
+            @media (max-width: 991px) {
+              border-color: unset;
+            }
+          }
+          @media (max-width: 991px) {
+            &:nth-child(2n-1):before {
+            border-color: transparent;
+          }
+          }
+          
+          &:after {
+            bottom: 0;
+            left: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
+            position: absolute;
+            content: "";
+          }
+          .tech-item-inner-wrapper {
+            padding: 3rem;
+            // border: 1px solid #feb960;
+            overflow: hidden;
             transition: all 500ms ease-out;
-            padding: 1rem;
-            .tech-item {
-              transition: all 500ms ease-out;
-              display: inline-block;
-              position: relative;
-              .tech-icon {
+            height: 330px;
+            transition: all 500ms ease-out;
+            &:hover {
+              &:before {
+                content: "";
+                width: 75px;
+                height: 1px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #feb960;
                 transition: all 500ms ease-out;
-                text-align: left;
-                img {
+                transform: translate3d(0px, 0, 0px);
+              }
+              &:after {
+                content: "";
+                width: 1px;
+                height: 75px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #feb960;
+                transition: all 500ms ease-out;
+              }
+              transition: all 500ms ease-out;
+              padding: 1rem;
+              .tech-item {
+                transition: all 500ms ease-out;
+                // display: inline-block;
+                // position: relative;
+                left: -30px;
+                top: 0;
+                transform: translate3d(15px, 15px, 0);
+                position: absolute;
+                width: 130px;
+                .tech-icon {
                   transition: all 500ms ease-out;
-                  height: 50px;
+                  text-align: center;
+                  img {
+                    transition: all 500ms ease-out;
+                    height: 50px;
+                  }
+                }
+                .tech-description {
+                  // transition: all 500ms ease-out;
+                  // text-align: unset;
+                  // // position: absolute;
+                  // // left: 0;
+                  // transform: translateX(-50%) translateY(-50%) rotate(90deg);
+                  transform: translate3d(0, 15px, 0) rotate(90deg);
+                  position: relative;
+                  text-align: left;
+                  margin: 0;
+                  top: 40px;
+                  .title {
+                    transition: all 500ms ease-out;
+                    margin: 0;
+                  }
                 }
               }
-              .tech-description {
+              .tech-content {
                 transition: all 500ms ease-out;
-                text-align: unset;
-                position: absolute;
-                left: 0;
-                transform: translate3d(0, 50px, 0) rotate(90deg);
-                .title {
-                  transition: all 500ms ease-out;
-                  margin: 0;
-                }
+                display: inline-block;
+                width: 75%;
+                float: right;
+                // display: block;
+              }
+            }
+            .tech-icon {
+              transition: all 500ms ease-out;
+              text-align: center;
+              img {
+                transition: all 500ms ease-out;
+                height: 150px;
+                width: auto;
+              }
+            }
+            .tech-description {
+              transition: all 500ms ease-out;
+              text-align: center;
+              .title {
+                transition: all 500ms ease-out;
+                color: #feb960;
               }
             }
             .tech-content {
-              transition: all 500ms ease-out;
-              position: absolute;
-              display: inline-block;
-              width: 60%;
-              float: right;
-              // display: block;
-            }
-          }
-          .tech-icon {
-            transition: all 500ms ease-out;
-            text-align: center;
-            img {
-              transition: all 500ms ease-out;
-              height: 150px;
-              width: auto;
-            }
-          }
-          .tech-description {
-            transition: all 500ms ease-out;
-            text-align: center;
-            .title {
-              transition: all 500ms ease-out;
-              color: #feb960;
-            }
-          }
-          .tech-content {
-            display: none;
-            p {
-              transition: all 500ms ease-out;
-              color: #9c9c9c;
+              display: none;
+              p {
+                transition: all 500ms ease-out;
+                color: #9c9c9c;
+              }
             }
           }
         }
