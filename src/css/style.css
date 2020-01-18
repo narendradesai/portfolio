@@ -441,8 +441,9 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
 }
 
 .projects {
-  background-color: #feb960;
+  background-color: #171717;
   height: 100vh;
+  color: #ffffff;
 }
 .contact-me {
   background-color: red;

@@ -8,6 +8,7 @@ $(document).ready(function() {
   var $win = $(window);
   var winH = $win.height() - 20;
 
+  // Nav toggle js
   $("nav .navbar-toggle").on("click", function() {
     $("nav .navbar-content").slideToggle();
     $(this)
@@ -18,6 +19,7 @@ $(document).ready(function() {
       .toggleClass("fa-bars");
   });
   var nav = $("nav.top-fixed-nav");
+  // On scroll show nav
   $win.on("scroll", function() {
     var scrollPos = $(document).scrollTop();
     $(this).scrollTop() > winH
@@ -37,4 +39,23 @@ $(document).ready(function() {
       }
     });
   });
+  // Nav Js Ends
+
+  // Portfolio slider js
+  var mySwiper = new Swiper('.swiper-container', {
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    speed: 400,
+    spaceBetween: 100
+});
 });
