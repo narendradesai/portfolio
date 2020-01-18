@@ -248,7 +248,7 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
   background-color: #202020;
 }
 .technologies .inner-container {
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
 }
 .technologies .inner-container .container h1 {
   text-align: center;
@@ -373,6 +373,71 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
 .technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper .tech-content p {
   transition: all 500ms ease-out;
   color: #9c9c9c;
+}
+
+.experience {
+  background-color: #202020;
+  position: relative;
+  color: #ffffff;
+}
+.experience .inner-container {
+  padding: 3rem 0;
+}
+.experience .inner-container .background-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.experience .inner-container .background-wrapper .column {
+  width: 32%;
+  display: inline-block;
+  height: 100%;
+}
+.experience .inner-container .background-wrapper > .column:not(:first-child) {
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+.experience .inner-container .container-wapper .col-wrapper .title {
+  padding-bottom: 25px;
+}
+.experience .inner-container .container-wapper .col-wrapper .title .title-inner {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+}
+.experience .inner-container .container-wapper .col-wrapper .resume-items .resume-item {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #202020;
+  margin: 0;
+  padding: 1rem;
+  margin-top: 40px;
+}
+.experience .inner-container .container-wapper .col-wrapper .resume-items .resume-item:first-child {
+  margin: 0;
+}
+.experience .inner-container .container-wapper .col-wrapper .resume-items .resume-item:hover {
+  box-shadow: 0px 2px 10px black;
+}
+.experience .inner-container .container-wapper .col-wrapper .resume-items .resume-item .company .company-name {
+  color: #feb960;
+  padding-bottom: 5px;
+}
+.experience .inner-container .container-wapper .col-wrapper .resume-items .resume-item .company .total-term {
+  color: #eeeeee;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+.experience .inner-container .container-wapper .col-wrapper .resume-items .resume-item .company .designation {
+  padding: 0 1rem;
+}
+.experience .inner-container .container-wapper .col-wrapper .resume-items .resume-item .company .designation .term {
+  padding-left: 1rem;
+}
+.experience .inner-container .container-wapper .col-wrapper .resume-items .resume-item .company .designation .text {
+  color: #9c9c9c;
+  line-height: 1.5;
+  font-weight: 400;
+  padding-left: 1rem;
 }
 
 .projects {
