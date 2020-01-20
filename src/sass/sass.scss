@@ -395,27 +395,26 @@ nav {
   .inner-container {
     padding: 3rem 0;
     .background-wrapper {
-        position: absolute;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      .column {
+        width: 32%;
+        display: inline-block;
         height: 100%;
-        width: 100%;
-        top: 0;
-        .column {
-          width: 32%;
-          display: inline-block;
-          height: 100%;
-        }
-        & > .column:not(:first-child) {
-          border-left: 1px solid rgba(255, 255, 255, 0.05);
-        }
       }
+      & > .column:not(:first-child) {
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
+      }
+    }
     .container-wapper {
-      
       .col-wrapper {
         .title {
           padding-bottom: 25px;
           .title-inner {
             text-align: center;
-            font-size: 24px ;
+            font-size: 24px;
             color: #ffffff;
           }
         }
@@ -427,7 +426,7 @@ nav {
             padding: 1rem;
             margin-top: 40px;
             &:first-child {
-              margin: 0;;
+              margin: 0;
             }
             &:hover {
               box-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
@@ -435,7 +434,7 @@ nav {
             .company {
               .company-name {
                 color: #feb960;
-                padding-bottom: 5px;;
+                padding-bottom: 5px;
               }
               .total-term {
                 color: #eeeeee;
@@ -445,7 +444,6 @@ nav {
               .designation {
                 padding: 0 1rem;
                 .designation-name {
-
                 }
                 .term {
                   padding-left: 1rem;
@@ -466,9 +464,42 @@ nav {
 }
 .projects {
   background-color: #171717;
-  height: 100vh;
   color: #ffffff;
   .inner-container {
+    .container-wrapper {
+      .row-wrapper {
+        padding: 7rem 0;
+        .portfolio-container {
+          overflow: hidden;
+          .swiper-container {
+            .swiper-wrapper {
+              .swiper-slide {
+                .image {
+                  img {
+                    height: 475px;
+                  }
+                }
+              }
+            }
+            .swiper-pager {
+              text-align: center;
+              .swiper-pagination-bullet {
+                width: 30px;
+                height: 3px;
+                display: inline-block;
+                border-radius: unset;
+                background: #4c4c4c;
+                opacity: unset;
+                margin: 39px 20px 1px 20px;
+                &.swiper-pagination-bullet-active {
+                  background-color: #feb960;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 .contact-me {

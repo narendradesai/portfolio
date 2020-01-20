@@ -42,20 +42,32 @@ $(document).ready(function() {
   // Nav Js Ends
 
   // Portfolio slider js
-  var mySwiper = new Swiper('.swiper-container', {
+  var mySwiper = new Swiper(".swiper-container", {
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pager"
     },
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
     },
     // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
+    // scrollbar: {
+    //   el: ".swiper-scrollbar"
+    // },
+    effect: "cube",
+    grabCursor: true,
+    loop: true,
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94
     },
-    speed: 400,
-    spaceBetween: 100
-});
+    mousewheel: false,
+    shortSwipes: true,
+    // mousewheel: {
+    //   sensitiwity: 0.5,
+    // }
+  });
 });
