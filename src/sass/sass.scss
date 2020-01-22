@@ -642,9 +642,62 @@ nav {
   }
 }
 .contact-me {
-  background-color: red;
-  height: 100vh;
+  background-color: #171717;
+  // height: 100vh;
+  position: relative;
+  .map-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+  }
   .inner-container {
+    padding-bottom: 5rem;
+    .contact-header {
+      text-align: center;
+      .line {
+        height: 115px;
+        width: 1px;
+        left: 50%;
+        position: relative;
+        background-color: #f7ac54;
+      }
+      .title {
+        font-size: 14px;
+        line-height: 40px;
+        font-weight: 600;
+        color: #f7ac54;
+        text-transform: uppercase;
+      }
+      .heading {
+        color: #ffffff;
+        font-size: 40px;
+        line-height: 65px;
+        font-weight: 400;
+        padding-bottom: 5rem;
+      }
+    }
+    .contact-content {
+      & > div {
+        text-align: center;
+      }
+      .title {
+        color: #ffffff;
+      }
+      .value {
+        a {
+          color: #9c9c9c;
+          &:hover {
+            color: #f7ac54;
+            text-decoration: none;
+          }
+        }
+      }
+      .soc-icon {
+        display: inline-block;
+        padding: 0 0.5rem;
+      }
+    }
   }
 }
 

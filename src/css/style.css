@@ -633,9 +633,60 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
 }
 
 .contact-me {
-  background-color: red;
-  height: 100vh;
+  background-color: #171717;
+  position: relative;
 }
+.contact-me .map-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+}
+.contact-me .inner-container {
+  padding-bottom: 5rem;
+}
+.contact-me .inner-container .contact-header {
+  text-align: center;
+}
+.contact-me .inner-container .contact-header .line {
+  height: 115px;
+  width: 1px;
+  left: 50%;
+  position: relative;
+  background-color: #f7ac54;
+}
+.contact-me .inner-container .contact-header .title {
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #f7ac54;
+  text-transform: uppercase;
+}
+.contact-me .inner-container .contact-header .heading {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 65px;
+  font-weight: 400;
+  padding-bottom: 5rem;
+}
+.contact-me .inner-container .contact-content > div {
+  text-align: center;
+}
+.contact-me .inner-container .contact-content .title {
+  color: #ffffff;
+}
+.contact-me .inner-container .contact-content .value a {
+  color: #9c9c9c;
+}
+.contact-me .inner-container .contact-content .value a:hover {
+  color: #f7ac54;
+  text-decoration: none;
+}
+.contact-me .inner-container .contact-content .soc-icon {
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
