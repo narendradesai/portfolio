@@ -44,12 +44,17 @@ $(document).ready(function() {
   // Portfolio slider js
   var mySwiper = new Swiper(".swiper-container", {
     pagination: {
-      el: ".swiper-pager"
+      el: ".swiper-pager",
+      clickable: true,
     },
+    // centeredSlides: true,
+    // autoplay: {
+    //   delay: 2500,
+    // },
     // Navigation arrows
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: ".swiper-next",
+      prevEl: ".swiper-prev"
     },
     // And if we need scrollbar
     // scrollbar: {
@@ -58,6 +63,7 @@ $(document).ready(function() {
     effect: "cube",
     grabCursor: true,
     loop: true,
+    speed: 3000,
     cubeEffect: {
       shadow: true,
       slideShadows: true,

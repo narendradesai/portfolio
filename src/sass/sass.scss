@@ -468,16 +468,101 @@ nav {
   .inner-container {
     .container-wrapper {
       .row-wrapper {
-        padding: 7rem 0;
+        padding-right: 150px;
+        padding-left: 150px;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        @media (max-width: 768px) {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
         .portfolio-container {
-          overflow: hidden;
           .swiper-container {
             .swiper-wrapper {
               .swiper-slide {
                 .image {
+                  text-align: center;
                   img {
                     height: 475px;
+                    width: 100%;
+                    @media (max-width: 768px) {
+                      height: 450px;
+                    }
+                    @media (max-width: 425px) {
+                      height: 200px;
+                    }
                   }
+                  .dark-overlay {
+                    height: 475px;
+                    width: 100%;
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.5);
+                    @media (max-width: 768px) {
+                      height: 450px;
+                    }
+                    @media (max-width: 425px) {
+                      height: 200px;
+                    }
+                  }
+                }
+                .portfolio-heading {
+                  position: absolute;
+                  left: -140px;
+                  top: 0;
+                  z-index: 1;
+                  width: 500px;
+                  @media (max-width: 768px) {
+                    left: -25px;
+                    width: 300px;
+                  }
+                  @media (max-width: 425px) {
+                    position: relative;
+                    left: unset;
+                    text-align: center;
+                    width: unset;
+                  }
+                  .line {
+                    height: 115px;
+                    width: 1px;
+                    background-color: #feb960;
+                    position: relative;
+                    left: 5px;
+                    @media (max-width: 768px) {
+                      height: 80px;
+                    }
+                    @media (max-width: 425px) {
+                      left: 50%;
+                    }
+                  }
+                  .sub-heading-outer {
+                    p {
+                      font-size: 14px;
+                      line-height: 40px;
+                      font-weight: 600;
+                      color: #f7ac54;
+                      text-transform: uppercase;
+                      @media (max-width: 768px) {
+                        line-height: 20px;
+                      }
+                    }
+                  }
+                  .text {
+                    .inner {
+                      a {
+                        font-size: 35px;
+                        line-height: 45px;
+                        font-weight: 400;
+                        color: #ffffff;
+                        &:hover {
+                          text-decoration: underline;
+                          text-decoration-color: #f7ac54;
+                          transition: All 1s;
+                        }
+                      }
+                    }
+                  }
+                }
+                .portfolio-footer {
                 }
               }
             }
@@ -493,6 +578,60 @@ nav {
                 margin: 39px 20px 1px 20px;
                 &.swiper-pagination-bullet-active {
                   background-color: #feb960;
+                }
+              }
+            }
+            .swiper-footer {
+              position: absolute;
+              right: -100px;
+              bottom: 50px;
+              z-index: 1;
+              @media (max-width: 768px) {
+                right: -25px;
+              }
+              @media (max-width: 425px) {
+                position: relative;
+                right: unset;
+                text-align: center;
+                bottom: unset;
+              }
+              .swiper-prev {
+                font-size: 14px;
+                font-weight: 600;
+                &:hover {
+                  color: #f7ac54;
+                }
+                i {
+                  color: #f7ac54;
+                }
+              }
+              .swiper-next {
+                font-size: 14px;
+                line-height: 40px;
+                font-weight: 600;
+                @media (max-width: 768px) {
+                  text-align: right;
+                }
+                @media (max-width: 425px) {
+                  text-align: unset;
+                }
+                &:hover {
+                  color: #f7ac54;
+                }
+                i {
+                  color: #f7ac54;
+                }
+              }
+              .line {
+                height: 115px;
+                width: 1px;
+                background-color: #f7ac54;
+                @media (max-width: 768px) {
+                  height: 80px;
+                  float: right;
+                }
+                @media (max-width: 425px) {
+                  height: 0;
                 }
               }
             }
