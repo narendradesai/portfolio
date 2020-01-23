@@ -143,25 +143,19 @@ nav {
 
 .home-page {
   background-color: #171717;
-  height: 100vh;
   background: url(../assets/images/drupal-background.jpg) no-repeat center
     center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // height: 100%;
   overflow: hidden;
   position: relative;
-  // padding: 240px 0px 320px 0px;
-  // padding: 5% 0;
   color: #ffffff;
   .container-wrapper {
     padding-top: 170px;
     padding-bottom: 170px;
-
     width: 100%;
-    position: absolute;
     // top: 50%;
     // transform: translateY(-50%);
     .column-wrapper {
@@ -399,6 +393,7 @@ nav {
       height: 100%;
       width: 100%;
       top: 0;
+      left: 0;
       .column {
         width: 32%;
         display: inline-block;

@@ -154,7 +154,6 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
 
 .home-page {
   background-color: #171717;
-  height: 100vh;
   background: url(../assets/images/drupal-background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -168,7 +167,6 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
   padding-top: 170px;
   padding-bottom: 170px;
   width: 100%;
-  position: absolute;
 }
 .home-page .container-wrapper .column-wrapper {
   padding: 2rem;
@@ -388,6 +386,7 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
   height: 100%;
   width: 100%;
   top: 0;
+  left: 0;
 }
 .experience .inner-container .background-wrapper .column {
   width: 32%;
