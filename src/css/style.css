@@ -347,6 +347,14 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
   display: inline-block;
   width: 75%;
   float: right;
+  color: #9c9c9c;
+}
+.technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper:hover .tech-content a {
+  color: #9c9c9c;
+}
+.technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper:hover .tech-content a:hover {
+  color: #feb960;
+  transition: color 1s;
 }
 .technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper .tech-icon {
   transition: all 500ms ease-out;
@@ -367,6 +375,9 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
 }
 .technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper .tech-content {
   display: none;
+  color: #9c9c9c;
+  width: 75%;
+  float: right;
 }
 .technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper .tech-content p {
   transition: all 500ms ease-out;

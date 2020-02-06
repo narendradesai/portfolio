@@ -223,7 +223,6 @@ nav {
                 color: #ffffff;
                 &:hover {
                   color: #feb960;
-
                   transition: color 1s;
                 }
                 span {
@@ -349,7 +348,14 @@ nav {
                 display: inline-block;
                 width: 75%;
                 float: right;
-                // display: block;
+                color: #9c9c9c;
+                a {
+                  color: #9c9c9c;
+                  &:hover {
+                    color: #feb960;
+                    transition: color 1s;
+                  }
+                }
               }
             }
             .tech-icon {
@@ -371,6 +377,9 @@ nav {
             }
             .tech-content {
               display: none;
+              color: #9c9c9c;
+              width: 75%;
+              float: right;
               p {
                 transition: all 500ms ease-out;
                 color: #9c9c9c;
