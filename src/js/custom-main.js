@@ -1,10 +1,16 @@
+// Preloader JS
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector("#main-preloader").style.visibility = "visible";
+  } else {
+    // setTimeout(function() {
+    document.querySelector("#main-preloader").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+    // }, 1000);
+  }
+};
 $(document).ready(function() {
-  // $("body").jpreLoader({
-  //   preMainSection: "#main-preloader",
-  //   prePerText: ".preloader-percentage-text",
-  //   preBar: ".preloader-bar"
-  // });
-  // console.log('sfsf');
   var $win = $(window);
   var winH = $win.height() - 20;
 
@@ -78,49 +84,46 @@ $(document).ready(function() {
   });
 
   // Smooth scrolling
-  // Select all links with hashes
-$('a[href*="#"]')
-// Remove links that don't actually link to anything
-.not('[href="#"]')
-.not('[href="#0"]')
-.click(function(event) {
-  // On-page links
-  if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-    && 
-    location.hostname == this.hostname
-  ) {
-    // Figure out element to scroll to
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    // Does a scroll target exist?
-    if (target.length) {
-      // Only prevent default if animation is actually gonna happen
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000);
-    }
-  }
-});
-
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length
+          ? target
+          : $("[name=" + this.hash.slice(1) + "]");
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top
+            },
+            1000
+          );
+        }
+      }
+    });
 
   // Maps
   // When the window has finished loading create our google map below
   google.maps.event.addDomListener(window, "load", init);
 
   function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
-      // How zoomed in you want the map to start at (always required)
       zoom: 12,
-
-      // The latitude and longitude to center the map (always required)
+      // Map Center
       center: new google.maps.LatLng(15.6885175, 73.922147), // Pernem
-
-      // How you would like to style the map.
-      // This is where you would paste any style found on Snazzy Maps.
+      // Maps style
       styles: [
         {
           featureType: "all",
@@ -385,17 +388,11 @@ $('a[href*="#"]')
         }
       ]
     };
-
-    // Get the HTML DOM element that will contain your map
-    // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById("contact-map");
-
-    // Create the Google Map using our element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
-
-    // Let's also add a marker while we're at it
+    // Add marker
     var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(15.6877849, 73.8180324),
+      position: new google.maps.LatLng(15.6877849, 73.8180324), // Virnoda Goa
       map: map,
       title: "Snazzy!"
     });
