@@ -1,11 +1,63 @@
 /* Navbar css */
 body {
   background-color: #202020;
+  visibility: hidden;
 }
 body .color {
   color: #feb960;
 }
 
+.loader-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+  background-color: #202020;
+}
+.loader-wrapper .loader {
+  border: 2px solid #ffffff;
+  top: 50%;
+  width: 68px;
+  height: 68px;
+  margin: 50px auto 0;
+  position: relative;
+  animation: animate 2.6s linear infinite;
+}
+.loader-wrapper .loader:before,
+.loader-wrapper .loader:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 2px solid #feb960;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  animation: animate_1 1.3s linear infinite;
+  animation-direction: reverse;
+}
+.loader-wrapper .loader:after {
+  width: 96px;
+  height: 96px;
+  top: -15px;
+  left: -15px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate_1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 nav.visible {
   display: block;
 }
@@ -332,7 +384,7 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
   height: 50px;
 }
 .technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper:hover .tech-item .tech-description {
-  transform: translate3d(0, 15px, 0) rotate(90deg);
+  transform: translate3d(0, 40px, 0) rotate(90deg);
   position: relative;
   text-align: left;
   margin: 0;
@@ -347,6 +399,14 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
   display: inline-block;
   width: 75%;
   float: right;
+  color: #9c9c9c;
+}
+.technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper:hover .tech-content a {
+  color: #9c9c9c;
+}
+.technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper:hover .tech-content a:hover {
+  color: #feb960;
+  transition: color 1s;
 }
 .technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper .tech-icon {
   transition: all 500ms ease-out;
@@ -367,6 +427,9 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
 }
 .technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper .tech-content {
   display: none;
+  color: #9c9c9c;
+  width: 75%;
+  float: right;
 }
 .technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper .tech-content p {
   transition: all 500ms ease-out;
