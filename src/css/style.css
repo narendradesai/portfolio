@@ -332,7 +332,7 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
   height: 50px;
 }
 .technologies .inner-container .container .tech-wrapper .tech-item-wrapper .tech-item-inner-wrapper:hover .tech-item .tech-description {
-  transform: translate3d(0, 15px, 0) rotate(90deg);
+  transform: translate3d(0, 40px, 0) rotate(90deg);
   position: relative;
   text-align: left;
   margin: 0;
