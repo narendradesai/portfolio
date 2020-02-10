@@ -492,6 +492,7 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
 }
 .experience .inner-container .container-wapper .col-wrapper .resume-items .resume-item:hover {
   box-shadow: 0px 2px 10px #feb960;
+  transition: box-shadow 1s;
 }
 .experience .inner-container .container-wapper .col-wrapper .resume-items .resume-item .company .company-name {
   color: #feb960;
