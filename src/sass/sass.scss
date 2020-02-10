@@ -2,6 +2,7 @@
 body {
   background-color: #202020;
   visibility: hidden;
+  overflow-x: hidden;
   .color {
     color: #feb960;
   }
@@ -15,7 +16,7 @@ body {
   background-color: #202020;
   .loader {
     border: 2px solid #ffffff;
-    top: 50%;
+    top: calc( 100% - 70% );
     width: 68px;
     height: 68px;
     margin: 50px auto 0;
@@ -83,6 +84,7 @@ nav {
         color: #feb960;
         margin: 0;
         padding-top: 10px;
+        padding-left: 5px;
         &:hover {
           text-decoration: none;
           color: #feb960;
@@ -219,6 +221,7 @@ nav {
     .home-page-nav {
       ul {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         padding: 2.5rem 0 1rem 0;
         li {
@@ -275,6 +278,7 @@ nav {
               list-style: none;
               .nav-link {
                 color: #ffffff;
+                padding: 0 1rem;
                 &:hover {
                   color: #feb960;
                   transition: color 1s;

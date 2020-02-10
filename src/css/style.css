@@ -2,6 +2,7 @@
 body {
   background-color: #202020;
   visibility: hidden;
+  overflow-x: hidden;
 }
 body .color {
   color: #feb960;
@@ -16,7 +17,7 @@ body .color {
 }
 .loader-wrapper .loader {
   border: 2px solid #ffffff;
-  top: 50%;
+  top: calc( 100% - 70% );
   width: 68px;
   height: 68px;
   margin: 50px auto 0;
@@ -85,6 +86,7 @@ nav.top-fixed-nav .nav-wrapper .navbar-brand {
   color: #feb960;
   margin: 0;
   padding-top: 10px;
+  padding-left: 5px;
 }
 nav.top-fixed-nav .nav-wrapper .navbar-brand:hover {
   text-decoration: none;
@@ -226,6 +228,7 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
 }
 .home-page .container-wrapper .home-page-nav ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 2.5rem 0 1rem 0;
 }
@@ -284,6 +287,7 @@ nav.top-fixed-nav .navbar-content .nav-item-wrapper ul .nav-item .nav-link:hover
 }
 .home-page .container-wrapper .hp-navbar .container-wrapper-nav .navbar-right ul .nav-item .nav-link {
   color: #ffffff;
+  padding: 0 1rem;
 }
 .home-page .container-wrapper .hp-navbar .container-wrapper-nav .navbar-right ul .nav-item .nav-link:hover {
   color: #feb960;
